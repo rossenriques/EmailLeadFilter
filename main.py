@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('/Users/advisium/Documents/LVLeads/medspasLV.csv')
+df = pd.read_csv('/Users/advisium/Documents/LVLeads/autoDetailingLV.csv')
 
 pd.set_option('display.max_rows', None)
 
@@ -12,7 +12,7 @@ filtered_df = filtered_df.drop_duplicates(subset=["Email"], keep='first')
 
 filtered_df = filtered_df.reset_index(drop=True)
 
-filtered_df.to_csv("filtered_medspasLV.csv", index=False)
+filtered_df.to_csv("filtered_leadsLV.csv", index=False)
 
 print(filtered_df[["Name", "Email", "Phone", "Website"]])
 
